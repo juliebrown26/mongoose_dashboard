@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bear Dashboard</title>
+    </head>
+    <body>
+        <h1>Add a Bear</h1>
+        <form action="/bears" method="POST">
+            <h3>Name:<input type="text" name="name"></h3>
+            <h3>Type:<input type="text" name="type"></h3>
+            <h3>Home State:<input type="text" name="home_state"></h3>
+            <h3><input id="button" type="submit" value="Add Bear"></h3>
+        </form>
+        <% if(messages.bearform) { %>
+            <% for (var x of messages.bearform) { %>
+                <p id="error"><%= x %></p>
+            <% } %>
+        <% } %>
+        <a href="/">Go Back to Den</a>
+    </body>
+</html>

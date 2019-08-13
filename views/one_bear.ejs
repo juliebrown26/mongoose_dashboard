@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bear Dashboard</title>
+    </head>
+    <body>
+            <h1 id="name"> Bear: "<%= bear.name %>"</h1>
+            <ul>
+               <li id="type"><h4>Type: <%= bear.type %></h4></li>
+               <li id="home_state"><h4>From: <%= bear.home_state %></h4></li>  
+            </ul>
+        <a href="/bears/edit/<%= bear._id %>"><button>Edit this Bear's profile</button></a><br>
+        <br>
+        <form action="/bears/destroy/<%= bear._id %>" method="POST"><button>Delete this Bear's profile</button></form><br>
+        <br>
+        <a href="/">Back to the Den</a>
+    </body>
+</html>
